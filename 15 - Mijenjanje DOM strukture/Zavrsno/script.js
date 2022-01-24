@@ -1,7 +1,7 @@
 var descriptionNode = document.querySelector('.description');
 var footer = document.getElementById('footer');
 var h1 = document.createElement('h1');
-var infoDiv = document.createElement('<div class="info"/>');
+var infoDiv = document.createElement('<div class="info" />');
 var li = document.createElement('li');
 
 descriptionNode.parentNode.prepend(h1);
