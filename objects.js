@@ -16,12 +16,12 @@ console.log(myCar);
 
 //Stvaranje objekt literal
 const person = {
-  firstName: "Nino",
-  lastName: "Škuflić",
-  id: 115648972,
-  fullName: function(){
-      return this.firstName + " " + this.lastName;
-  }
+    firstName: "Nino",
+    lastName: "Škuflić",
+    id: 115648972,
+    fullName: function () {
+        return this.firstName + " " + this.lastName;
+    }
 };
 
 console.log(person.id);
@@ -37,21 +37,21 @@ console.log(myObject.age)
 
 //Objekt literal - kako se radi objekt
 const phones = {
-  brand: {
-      manufacturer: "Apple",
-      model: "iPhone 13 Pro"
-  },
-  color: ["Sierra Blue", "Silver", "Gold", "White"],
-  price: 999,
-  dispaly: "6.1-inch display",
-  qty: 184,
-  checkStock: function(){
-      if(this.qty > 0){
-          return "in stock";
-      }else{
-          return "out of stock";
-      }
-  }
+    brand: {
+        manufacturer: "Apple",
+        model: "iPhone 13 Pro"
+    },
+    color: ["Sierra Blue", "Silver", "Gold", "White"],
+    price: 999,
+    dispaly: "6.1-inch display",
+    qty: 184,
+    checkStock: function () {
+        if (this.qty > 0) {
+            return "in stock";
+        } else {
+            return "out of stock";
+        }
+    }
 };
 
 console.log(phones.brand.model);
@@ -63,21 +63,3 @@ console.log(`The selected phone ${phones.brand.model} is ${phones.checkStock()} 
 // JSON Stringify - odnosno pretvaranje objekta u JSON
 const myPhonesObject = JSON.stringify(phones);
 console.log(myPhonesObject);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
