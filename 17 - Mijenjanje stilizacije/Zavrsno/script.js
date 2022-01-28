@@ -1,36 +1,36 @@
-var body = document.querySelector('body');
-var li = document.querySelectorAll('li');
-var info = document.querySelector('.info');
-var h3 = document.querySelector('h3');
+var body = document.querySelector("body");
+var li = document.querySelectorAll("li");
+var info = document.querySelector(".info");
+var h3 = document.querySelector("h3");
 
 for (var i = 0; i < 5; i++) {
-	li[i].style.listStyleType = 'decimal';
+    li[i].style.listStyleType = "decimal";
 }
 
-info.classList.add('hide');
+info.classList.add("hide");
 
 const bodyStyles = window.getComputedStyle(body, null);
-const margin = bodyStyles.getPropertyValue('margin-left');
+const margin = bodyStyles.getPropertyValue("margin-left");
 console.log(margin);
 
 var marginNum = parseInt(margin);
-var animate = setInterval(frame, 200);
+var animate = setInterval(frame, 50);
 var reverse = false;
 
 function frame() {
-	if (reverse) {
-		marginNum--;
-	} else {
-		marginNum++;
-	}
-	
-	if (marginNum == 30) {
-		reverse = true;
-	}
-	
-	if (marginNum == 0) {
-		reverse = false;
-	}
+    if (reverse) {
+        marginNum--;
+    } else {
+        marginNum++;
+    }
 
-	body.style.margin = marginNum + 'px';
- }
+    if (marginNum == 30) {
+        reverse = true;
+    }
+
+    if (marginNum == 0) {
+        reverse = false;
+    }
+
+    body.style.margin = marginNum + "px";
+}

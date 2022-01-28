@@ -6,5 +6,5 @@ var name = 'John Doe';
 (function vratiNesto(name) {
    var x = name;
    function f() { return x; }
-   return f();
+   return f;
 })(name);

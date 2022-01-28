@@ -1,15 +1,21 @@
-var descriptionNode = document.querySelector('.description');
-var h1 = document.createElement('h1');
-var ul = document.querySelector("ul");
-var ul2 = ul.cloneNode(true);
-var infoDiv = document.createElement('div');
-infoDiv.className = "info";
-var li = document.createElement('li');
+// 1. dodavanje h1 elementa
+var h1 = document.createElement("h1");
+h1.innerText = "Hello world!";
 
-descriptionNode.parentNode.prepend(h1);
-descriptionNode.parentNode.insertBefore(infoDiv, descriptionNode.nextSibling);
+document.body.prepend(h1);
 
-for (var i = 0; i < 3; i++) {
-	ul.appendChild(li);
-    var li = document.createElement('li');
+// 2. novi div sa klasom info
+var infoDiv = document.createElement("div");
+infoDiv.setAttribute("class", "info");
+infoDiv.innerText = "Hello!!";
+
+var descriptionDiv = document.querySelector(".description");
+document.body.insertBefore(infoDiv, descriptionDiv.nextSibling);
+
+// 3. 5 praznih li elemenata
+var ulElement = document.querySelector("ul");
+
+for (var i = 0; i < 2; i++) {
+    var liElement = document.createElement("li");
+    ulElement.appendChild(liElement);
 }

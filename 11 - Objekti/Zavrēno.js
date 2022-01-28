@@ -25,7 +25,7 @@ var auto = {
 		this.boja = novaBoja;
 		return this.boja;
 	}
-};
+}
 
 console.log(auto.zakoci(4));
 console.log(auto.ubrzaj(10));

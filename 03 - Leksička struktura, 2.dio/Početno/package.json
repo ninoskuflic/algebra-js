@@ -1,0 +1,14 @@
+{
+    "name": "pocetno",
+    "version": "1.0.0",
+    "description": "",
+    "main": "program.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "dstrekelj <domagojstrekelj@gmail.com>",
+    "license": "UNLICENSED",
+    "devDependencies": {
+        "prettier": "2.0.5"
+    }
+}
