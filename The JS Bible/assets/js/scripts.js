@@ -21,6 +21,7 @@
  * - Do while loop
  * - Event listeners
  * - DOM Manipulation
+ * - Classes
  *----------------------------------------------------------------------------*/
 
 /*
@@ -227,7 +228,7 @@ console.log(array4[0]); // Nino should be shown on position 0
  * WINDOW METHODS ----------------------------------------------------------------------
  */
 
-window.open();
+// window.open();
 // window.close();
 console.log(window.innerWidth);
 console.log(window.innerHeight);
@@ -321,3 +322,47 @@ function pandaDancing() {
  */
 
 document.getElementsByClassName("footer-text")[0].innerHTML = `&copy; ${new Date().getFullYear()} Nino Škuflić - All rights reserved.<br>The width of your screen is ${window.innerWidth}px, and the height is ${window.innerHeight}px.<br> Oh, and by the way - today is ${Date()}.`;
+
+/*
+ * CLASSES -----------------------------------------------------------
+ */
+
+// Creating a Student class with a default constructor which takes 4 parameters
+class Student {
+    /* 
+     * What is a constructor? That is a special method in the body of a class that initializes the instance. 
+     * That's the place where you set the initial values for the fields, or do any kind of object setup.
+     * In the following example the constructor sets the initial value of the field name, surname and years.
+     * Inside the constructor "this" value equals to the newly created instance.
+     * The arguments used to instantiate the class become the parameters of the constructor.
+     */
+    constructor(firstName, lastName, years) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.years = years;
+    }
+    // Custom method
+    basicInfo() {
+        return `The student ${this.firstName} ${this.lastName} has ${this.years} years. `;
+    }
+}
+
+let student1 = new Student("Nino", "Škuflić", 24); // Creates an instance of the User class
+console.log(student1.firstName); // You can access name field using a property accessor
+console.log(student1.basicInfo()); // Invoking the basicInfo() method on student
+
+class Report extends Student {
+    // This is our class constructor
+    constructor(firstName, lastName, years, grade) {
+        super(firstName, lastName, years);
+        this.grade = grade;
+    }
+    // Custom method
+    yearLevel() {
+        return `The student ${this.firstName} ${this.lastName} is a ${this.grade.toLowerCase()} student and he/she is ${this.years} years old.`;
+    }
+}
+
+
+let student2 = new Report("John", "Smith", 24, "Senior"); // Creates an instance of the Report class.
+console.log(student2.yearLevel());
