@@ -227,7 +227,7 @@ console.log(array4[0]); // Nino should be shown on position 0
  */
 
 window.open();
-window.close();
+// window.close();
 console.log(window.innerWidth);
 console.log(window.innerHeight);
 
