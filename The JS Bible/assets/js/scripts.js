@@ -20,6 +20,7 @@
  * - For loop
  * - Do while loop
  * - Event listeners
+ * - DOM Manipulation
  *----------------------------------------------------------------------------*/
 
 /*
@@ -304,3 +305,19 @@ document.getElementById("button-1").addEventListener("click", myButtonFunction);
 function myButtonFunction() {
     document.getElementById("paragraph-1").innerHTML = "You have clicked the button. Why?";
 }
+
+
+var dancingPanda = document.getElementsByClassName("panda-dancing")[0];
+dancingPanda.addEventListener("mouseenter", pandaDancing);
+
+function pandaDancing() {
+    document.getElementById("whoops").innerHTML = "Whoops. It escaped!";
+    dancingPanda.style.position = 'absolute';
+    dancingPanda.style.right = '0px';
+}
+
+/*
+ * DOM MANIPULATION -----------------------------------------------------------
+ */
+
+document.getElementsByClassName("footer-text")[0].innerHTML = `&copy; ${new Date().getFullYear()} Nino Škuflić - All rights reserved.<br>The width of your screen is ${window.innerWidth}px, and the height is ${window.innerHeight}px.<br> Oh, and by the way - today is ${Date()}.`;
