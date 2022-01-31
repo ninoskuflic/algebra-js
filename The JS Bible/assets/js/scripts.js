@@ -343,11 +343,11 @@ class Student {
     }
     // Custom method
     basicInfo() {
-        return `The student ${this.firstName} ${this.lastName} has ${this.years} years. `;
+        return `The student ${this.firstName} ${this.lastName} is ${this.years} years old. `;
     }
 }
 
-let student1 = new Student("Nino", "Škuflić", 24); // Creates an instance of the User class
+let student1 = new Student("Nino", "Škuflić", 24); // Creates an instance of the Student class
 console.log(student1.firstName); // You can access name field using a property accessor
 console.log(student1.basicInfo()); // Invoking the basicInfo() method on student
 
