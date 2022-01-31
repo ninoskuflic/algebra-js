@@ -22,6 +22,7 @@
  * - Event listeners
  * - DOM Manipulation
  * - Classes
+ * - API (connecting to API)
  *----------------------------------------------------------------------------*/
 
 /*
@@ -366,3 +367,22 @@ class Report extends Student {
 
 let student2 = new Report("John", "Smith", 24, "Senior"); // Creates an instance of the Report class.
 console.log(student2.yearLevel());
+
+
+/*
+ * CONNECTING TO API -----------------------------------------------------------
+ */
+
+// Guess the age of a person based on their name
+const userInput = window.prompt(`Enter your name:`);
+fetch(`https://api.agify.io/?name=${userInput}`)
+    .then(response => response.json())
+    .then(data => alert(`${data.name}, you are ${data.age} year(s) old.`))
+    .catch(error => alert(error));
+
+
+// Display a random cat fact
+fetch("https://catfact.ninja/fact")
+    .then(response => response.json())
+    .then(data => document.getElementById("catFact").innerHTML = `${data.fact}`)
+    .catch(error => alert(error));
