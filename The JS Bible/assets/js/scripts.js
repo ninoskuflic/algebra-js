@@ -23,6 +23,8 @@
  * - DOM Manipulation
  * - Classes
  * - API (connecting to API)
+ * - Cookies
+ * - Local storage
  *----------------------------------------------------------------------------*/
 
 /*
@@ -386,3 +388,22 @@ fetch("https://catfact.ninja/fact")
     .then(response => response.json())
     .then(data => document.getElementById("catFact").innerHTML = `${data.fact}`)
     .catch(error => alert(error));
+
+
+/*
+ * COOKIES -----------------------------------------------------------
+ */
+
+
+document.cookie = "username=Nino Škuflić; expires=Thu, 31 Dec 2022 12:00:00 UTC; path=/; Secure;"; // Set cookie
+
+/*
+ * LOCAL STORAGE -----------------------------------------------------------
+ */
+
+localStorage.setItem("username", "ninoskuflic"); // Add to local storage
+localStorage.setItem("course", "Front-End Development");
+
+localStorage.getItem("name"); // Get local storage item with identifier "NAME"
+localStorage.removeItem("name"); // Remove a local storage item with identifier "NAME"
+localStorage.clear(); // Remove (delete) all local storage items
